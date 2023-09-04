@@ -325,7 +325,6 @@ address {
 .socials-team-icon {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-team-link {
@@ -337,6 +336,7 @@ address {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-team-link:hover {
@@ -382,7 +382,11 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-.cust-link:hover,
+.cust-link:hover {
+  border-color: var(--pressed-state);
+  color: var(--pressed-state);
+}
+
 .cust-link:focus {
   border-color: var(--pressed-state);
   color: var(--pressed-state);
@@ -556,7 +560,6 @@ address {
 }
 
 .foot-soc-el {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 40px; 
   height: 40px;
 
@@ -570,6 +573,8 @@ address {
   display: flex; 
   align-items: center; 
   justify-content: center; 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .foot-soc-link:hover, .foot-soc-link:focus {
