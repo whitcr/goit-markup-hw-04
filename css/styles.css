@@ -231,7 +231,8 @@ address {
 /* MAIN-SCREEN */
 
 .main-screen {
-  max-width: 1440px; 
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 188px 0;
   color: var(--white-background);
   background-color: var(--dark);
@@ -248,7 +249,7 @@ address {
 .centered {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
 }
 /* BLOCK-2 */
 
@@ -318,11 +319,14 @@ address {
   display: flex;
   justify-content: center;
   gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 .socials-team-icon {
   width: 40px;
   height: 40px;
+  
 }
 
 .socials-team-link {
@@ -352,6 +356,8 @@ address {
 }
 
 .cust-list {
+  margin: 0;
+  padding-left: 0;
   display: flex;
   gap: 24px; 
 }
@@ -480,9 +486,12 @@ address {
 .footer-socials-list {
   display: flex;
   gap: 16px;
+  margin: 0;
+  padding-left: 0;
 }
 
 .foot-soc-el {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
   width: 40px; 
   height: 40px;
 
@@ -505,4 +514,72 @@ address {
 
 .foot-soc-svg {
   fill: var(--light);
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden; 
+  pointer-events: none;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); 
+  width: 408px;
+  min-height: 584px; 
+  background: var(--modal-backgroung);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 
+  0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal-button {
+  position: absolute; 
+  top: 24px;
+  right: 24px; 
+  width: 24px; 
+  height: 24px; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  background-color: var(--accent);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer; 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal-button:hover,
+.clove-modal-button:focus {
+  background-color: var(--pressed-state);
+  border: none;
+}
+
+.close-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-svg:hover,
+.close-svg:focus {
+  fill: var(--white-background);
 }
